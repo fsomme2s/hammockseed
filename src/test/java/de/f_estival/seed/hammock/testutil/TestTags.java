@@ -1,7 +1,7 @@
 package de.f_estival.seed.hammock.testutil;
 
 /**
- * TODO jdoc
+ * Test-Tags for @{@link org.junit.jupiter.api.Tag} used in unit tests.
  */
 public class TestTags {
 

@@ -6,7 +6,11 @@
 
     <groupId>de.f_estival.seed</groupId>
     <artifactId>hammock</artifactId>
+    <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
+    <modules>
+        <module>ctest</module>
+    </modules>
 
     <properties>
         <hammock.version>1.1</hammock.version>

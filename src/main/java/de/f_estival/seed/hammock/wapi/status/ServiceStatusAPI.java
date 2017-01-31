@@ -2,7 +2,7 @@ package de.f_estival.seed.hammock.wapi.status;
 
 
 import de.f_estival.seed.hammock.service.monitor.MonitoringService;
-import ws.ament.hammock.web.undertow.UndertowWebServer;
+import de.f_estival.seed.hammock.wapi._common.IAPI;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -17,14 +17,14 @@ import javax.ws.rs.core.Response;
  */
 @Path(ServiceStatusAPI.PATH)
 @RequestScoped
-public class ServiceStatusAPI {
+public class ServiceStatusAPI implements IAPI {
 
     public static final String PATH = "/status";
 
     private MonitoringService monitoringService;
 
     @Inject
-    public ServiceStatusAPI(MonitoringService monitoringService, UndertowWebServer undertowWebServer) {
+    public ServiceStatusAPI(MonitoringService monitoringService) {
         this.monitoringService = monitoringService;
     }
 

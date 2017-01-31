@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- component test for the service -->
+    <parent>
+        <artifactId>hammock</artifactId>
+        <groupId>de.f_estival.seed</groupId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ctest</artifactId>
+
+    <dependencies>
+        <dependency>
+            <artifactId>hammock</artifactId>
+            <groupId>de.f_estival.seed</groupId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <version>3.0.19.Final</version>
+            <!-- newer versions do not seem to work... -->
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <!--java.lang.NoSuchMethodError: io.undertow.UndertowLogger.debugf-->
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>3.3.0.Final</version>
+        </dependency>
+
+
+
+    </dependencies>
+</project>
