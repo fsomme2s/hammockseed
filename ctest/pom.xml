@@ -28,7 +28,10 @@
         </dependency>
 
         <dependency>
-            <!--java.lang.NoSuchMethodError: io.undertow.UndertowLogger.debugf-->
+            <!--This dependency is only necessary to start the TestServer: otherwise we are getting following
+            exception at startup:
+            java.lang.NoSuchMethodError: io.undertow .UndertowLogger.debugf(...
+            -->
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging</artifactId>
             <version>3.3.0.Final</version>

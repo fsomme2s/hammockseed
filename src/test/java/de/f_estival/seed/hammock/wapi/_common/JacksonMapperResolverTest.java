@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * TODO jdoc
+ * Test for {@link JacksonMapperResolver}, asserting that its returned ObjectMapper is configured properly.
  */
 class JacksonMapperResolverTest {
 
@@ -23,7 +23,7 @@ class JacksonMapperResolverTest {
     @Tag(TestTags.TECH)
     public void testJSR310Support() throws JsonProcessingException {
         Object testData = new Object() {
-            private LocalDateTime timestamp = LocalDateTime.of(2017,01,31,8,34,42);
+            private LocalDateTime timestamp = LocalDateTime.of(2017,1,31,8,34,42);
             public LocalDateTime getTimestamp() { return timestamp; }
             public void setTimestamp(LocalDateTime timestamp) { this.timestamp = timestamp; }
         };

@@ -16,11 +16,11 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
- * TODO jdoc
+ * Test for {@link LoggingRequestFilter}, asserting that it won't crash in edge cases.
  */
 class LoggingRequestFilterTest {
 
-    public static final String PATH_CONTAINING_ALL_ALLOWED_URI_CHARS =
+    private static final String PATH_CONTAINING_ALL_ALLOWED_URI_CHARS =
             "http://localhost:4711/foobar/42?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-" +
                     "._~:/#[]@!$&'()*+,;=`.";
 

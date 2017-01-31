@@ -42,8 +42,9 @@ public class TestClientFactory {
     /**
      * Create a WebTarget for an {@link IAPI} Jax-RS Class.
      *
-     * @param targetAPIClass
-     * @return
+     * @param targetAPIClass The Jax-RS class for which the WebTarget should be created. The @{@link Path} information
+     *                       on its <i>class level</i> is used to determine the request URI.
+     * @return the WebTarget that can be used to do the actual API call.
      */
     public static WebTarget target(Class<? extends IAPI> targetAPIClass) {
         String targetUri = TestServer.BASE_PATH + targetAPIClass.getAnnotation(Path.class).value();
