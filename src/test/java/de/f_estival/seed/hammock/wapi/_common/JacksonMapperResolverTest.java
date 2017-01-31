@@ -6,6 +6,7 @@ import de.f_estival.seed.hammock.testutil.TestTags;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 
@@ -28,6 +29,7 @@ class JacksonMapperResolverTest {
         };
 
         JacksonMapperResolver underTest = new JacksonMapperResolver();
+        underTest.logger = LoggerFactory.getLogger(JacksonMapperResolver.class);
         underTest.init();
         ObjectMapper mapper = underTest.getContext(ObjectMapper.class);
 

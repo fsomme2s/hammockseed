@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="de.f_estival" level="debug" additivity="false">
+            <!-- additivity=false to prevent double-logging of log-levels that are also supported by Root. -->
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </Loggers>
+</Configuration>

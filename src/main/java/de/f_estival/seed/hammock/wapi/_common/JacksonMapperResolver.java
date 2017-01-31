@@ -3,9 +3,12 @@ package de.f_estival.seed.hammock.wapi._common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import de.f_estival.seed.hammock.xcon.logging.LogTags;
+import org.slf4j.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 
@@ -18,8 +21,8 @@ import javax.ws.rs.ext.Provider;
 @ApplicationScoped
 public class JacksonMapperResolver implements ContextResolver<ObjectMapper> {
 
-//    @Inject
-//    protected Logger logger;
+    @Inject
+    protected Logger logger;
 
     private ObjectMapper mapper;
 
@@ -29,8 +32,7 @@ public class JacksonMapperResolver implements ContextResolver<ObjectMapper> {
          * exactly one time, when the first resource is loaded.
          * ! Not using the constructor as we don't have dependencies injected there !
          */
-//        logger.info(LogTags.TECH + "Creating configured Jackson Object Mapper.");
-        System.out.println("Creating configured Jackson Object Mapper.");
+        logger.info(LogTags.TECH + "Creating configured Jackson Object Mapper.");
         createObjectMapper();
     }
 
