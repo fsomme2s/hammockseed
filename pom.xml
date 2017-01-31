@@ -12,9 +12,10 @@
         <hammock.version>1.1</hammock.version>
         <resteasy-jackson.version>3.1.0.Final</resteasy-jackson.version>
         <jackson-jsr310.version>2.8.6</jackson-jsr310.version>
-        <junit5.version>5.0.0-M3</junit5.version>
         <slf4j.version>1.7.22</slf4j.version>
         <log4j.version>2.7</log4j.version>
+        <junit5.version>5.0.0-M3</junit5.version>
+        <mockito.version>2.7.0</mockito.version>
     </properties>
 
     <dependencies>
@@ -68,6 +69,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
